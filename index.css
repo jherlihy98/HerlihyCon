@@ -9,14 +9,14 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
 }
 
 /* Header Styles */
 header {
-    background-color: #ffffff; /* Dark Blue */
+    background-color: #ffffff; /* White */
     color: #fff;
     padding: 20px 0;
     text-align: center;
