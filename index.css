@@ -16,7 +16,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #004165; /* Dark Blue */
+    background-color: #ffffff; /* Dark Blue */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -219,4 +219,11 @@ footer {
 footer p {
     margin: 0;
     font-size: 1em;
+}
+
+.logo {
+    max-width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center if needed */
+    margin: 0 auto; /* Centering the logo */
 }
