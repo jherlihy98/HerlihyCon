@@ -227,3 +227,54 @@ footer p {
     display: block; /* Center if needed */
     margin: 0 auto; /* Centering the logo */
 }
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 100%; /* Adjust to fit your design */
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-images img {
+    width: 100%;
+    display: none; /* Initially hide all images */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-images img.active {
+    display: block; /* Show the active image */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
