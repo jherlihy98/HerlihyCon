@@ -236,6 +236,7 @@ footer p {
     max-width: 100%; /* Adjust to fit your design */
     overflow: hidden;
     margin: auto;
+    flex: 1;
 }
 
 .carousel-images {
@@ -245,7 +246,7 @@ footer p {
 }
 
 .carousel-images img {
-    max-width: 300px;
+    max-width: 100%;
     display: none; /* Initially hide all images */
     object-fit: cover;
     border-radius: 10px;
