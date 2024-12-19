@@ -237,6 +237,7 @@ footer p {
     overflow: hidden;
     margin: auto;
     flex: 1;
+    text-align: center; /* Center any content horizontally */
 }
 
 .carousel-images {
@@ -280,4 +281,20 @@ footer p {
 
 .carousel-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Title Styling for Carousel */
+.carousel h3 {
+    position: absolute;
+    bottom: 10px; /* Position near the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 0;
+    width: fit-content;
+    z-index: 5; /* Above the images */
 }
