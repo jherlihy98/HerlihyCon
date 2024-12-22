@@ -234,6 +234,7 @@ footer p {
     height: auto; /* Maintain aspect ratio */
     display: block; /* Center if needed */
     margin: 0 auto; /* Centering the logo */
+    border: none;
 }
 
 /* Carousel Styles */
