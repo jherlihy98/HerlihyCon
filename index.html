@@ -140,10 +140,16 @@
         const nextBtn = carousel.querySelector(".carousel-btn.next");
         let currentIndex = 0;
 
+        // Ensure that the first image is active on page load
+        images[0].classList.add("active"); 
+
         // Function to show the current image
         function showImage(index) {
             images.forEach((img, i) => {
-                img.classList.toggle("active", i === index);
+                img.classList.remove("active"); // Remove active class from all images
+                if (i === index) {
+                    img.classList.add("active"); // Add active class to the current image
+                }
             });
         }
 
@@ -163,10 +169,10 @@
         nextBtn.addEventListener("click", nextImage);
         prevBtn.addEventListener("click", prevImage);
 
-        // Initial display
+        // Initial display (ensure the first image is shown)
         showImage(currentIndex);
 
-        // Debugging
+        // Debugging (confirm images are loaded)
         console.log(`Initialized carousel with ${images.length} images.`);
     });
 });
