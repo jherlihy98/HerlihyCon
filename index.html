@@ -131,10 +131,10 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        // Select all carousels on the page
+        // Get all carousels
         const carousels = document.querySelectorAll(".carousel");
 
-        carousels.forEach(carousel => {
+        carousels.forEach((carousel) => {
             const images = carousel.querySelectorAll(".carousel-images img");
             const prevBtn = carousel.querySelector(".carousel-btn.prev");
             const nextBtn = carousel.querySelector(".carousel-btn.next");
@@ -156,11 +156,13 @@
                 showImage(currentIndex);
             }
 
-            // Attach event listeners to navigation buttons
-            if (nextBtn) nextBtn.addEventListener("click", nextImage);
-            if (prevBtn) prevBtn.addEventListener("click", prevImage);
+            // Event listeners for navigation buttons
+            if (nextBtn && prevBtn) {
+                nextBtn.addEventListener("click", nextImage);
+                prevBtn.addEventListener("click", prevImage);
+            }
 
-            // Initial display
+            // Initial display for this carousel
             showImage(currentIndex);
         });
     });
