@@ -233,21 +233,27 @@ footer p {
 /* Carousel Styles */
 .carousel {
     position: relative;
-    max-width: 100%; /* Adjust to fit your design */
+    max-width: 100%;
     overflow: hidden;
     margin: auto;
     flex: 1;
-    text-align: center; /* Center any content horizontally */
+    text-align: center; /* Center content horizontally */
+    display: flex;
+    flex-direction: column; /* Align title and carousel vertically */
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .carousel-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
+    height: auto; /* Ensure images scale properly */
 }
 
 .carousel-images img {
-    max-width: 100%;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
     display: none; /* Initially hide all images */
     object-fit: cover;
     border-radius: 10px;
@@ -285,16 +291,12 @@ footer p {
 
 /* Title Styling for Carousel */
 .carousel h3 {
-    position: absolute;
-    bottom: 10px; /* Position near the bottom */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 1em;
-    margin: 0;
-    width: fit-content;
-    z-index: 5; /* Above the images */
+    z-index: 2;
 }
