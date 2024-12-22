@@ -131,31 +131,37 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const images = document.querySelectorAll(".carousel-images img");
-        const prevBtn = document.querySelector(".carousel-btn.prev");
-        const nextBtn = document.querySelector(".carousel-btn.next");
-        let currentIndex = 0;
+        // Select all carousels on the page
+        const carousels = document.querySelectorAll(".carousel");
 
-        function showImage(index) {
-            images.forEach((img, i) => {
-                img.classList.toggle("active", i === index);
-            });
-        }
+        carousels.forEach(carousel => {
+            const images = carousel.querySelectorAll(".carousel-images img");
+            const prevBtn = carousel.querySelector(".carousel-btn.prev");
+            const nextBtn = carousel.querySelector(".carousel-btn.next");
+            let currentIndex = 0;
 
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.classList.toggle("active", i === index);
+                });
+            }
+
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+                showImage(currentIndex);
+            }
+
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back to the last image
+                showImage(currentIndex);
+            }
+
+            // Attach event listeners to navigation buttons
+            if (nextBtn) nextBtn.addEventListener("click", nextImage);
+            if (prevBtn) prevBtn.addEventListener("click", prevImage);
+
+            // Initial display
             showImage(currentIndex);
-        }
-
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back to the last image
-            showImage(currentIndex);
-        }
-
-        nextBtn.addEventListener("click", nextImage);
-        prevBtn.addEventListener("click", prevImage);
-
-        // Initial display
-        showImage(currentIndex);
+        });
     });
 </script>
