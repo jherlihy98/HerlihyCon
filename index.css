@@ -236,7 +236,7 @@ footer p {
 }
 
 .logo {
-    max-width: 310px; /* Adjust the width as needed */
+    max-width: 450px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Center if needed */
     margin: 0 auto; /* Centering the logo */
