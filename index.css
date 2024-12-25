@@ -18,12 +18,17 @@ body {
 header {
     background-color: #ffffff;
     background-image: url('Images/IMG_4619.jpeg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+    background-size: cover; /* Ensures the image covers the entire header area */
+    background-position: center center; /* Keeps the image centered */
+    background-attachment: scroll; /* Disable parallax scrolling effect */
+    width: 100%; /* Full width */
+    height: 400px; /* Set a fixed height for the header */
     color: #fff;
-    padding: 30px 0;
     text-align: center;
+    display: flex; /* Allows centering of content */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    padding: 0; /* Remove extra padding */
 }
 
 header h1 {
